@@ -1,0 +1,25 @@
+void stack_data::push (int a)
+{
+    if(top >= 5)
+    {
+        cout << "Overflow\n";
+    }
+    else
+    {
+        data[++top] = a;   
+    }
+}
+int stack_data::pop ()
+{
+    if(top < 0)
+    {
+        cout << "Underflow\n";
+        return 0;
+    }
+    else
+    {
+        int pop = data[top--];
+        return pop;
+    }
+}
+
